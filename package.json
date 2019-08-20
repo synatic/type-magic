@@ -1,26 +1,43 @@
 {
   "name": "type-magic",
   "version": "0.0.1",
-  "description": "Utilities for checking and converting types",
+  "description": "Utilities for checking and converting javascript types",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/synatic/type-magic.git"
+  },
+  "keywords": [],
   "author": {
-    "name": "Martin Naude",
-    "email": "martin@filepounder.com"
+    "name": "FilePounder Inc",
+    "url": "https://filepounder.com"
   },
-  "dependencies": {
-    "check-types": "7.3.0",
-    "moment": "2.21.0",
-    "numeral": "2.0.6"
+  "contributors": [
+    {
+      "name": "Martin Naude",
+      "email": "martin@filepounder.com"
+    },
+    {
+      "name": "Thiren Bunsee",
+      "email": "thiren@filepounder.com"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/synatic/type-magic/issues"
   },
+  "homepage": "https://github.com/synatic/type-magic#readme",
   "engines": {
     "node": ">=6.0.0",
     "npm": ">=3.0.0"
   },
-  "homepage": "https://github.com/filepounder/type-magic",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/filepounder/type-magic.git"
+  "dependencies": {
+    "check-types": "10.0.0",
+    "moment": "2.24.0",
+    "numeral": "2.0.6"
   },
   "devDependencies": {
-    "mocha": "5.0.1"
+    "mocha": "^6.2.0"
   }
 }
