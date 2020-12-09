@@ -3,6 +3,10 @@
   "version": "0.0.1",
   "description": "Utilities for checking and converting javascript types",
   "main": "index.js",
+  "files": [
+    "lib/",
+    "index.js"
+  ],
   "scripts": {},
   "repository": {
     "type": "git",
@@ -11,16 +15,16 @@
   "keywords": [],
   "author": {
     "name": "FilePounder Inc",
-    "url": "https://filepounder.com"
+    "url": "https://synatic.com"
   },
   "contributors": [
     {
       "name": "Martin Naude",
-      "email": "martin@filepounder.com"
+      "email": "martin@synatic.com"
     },
     {
       "name": "Thiren Bunsee",
-      "email": "thiren@filepounder.com"
+      "email": "thiren@synatic.com"
     }
   ],
   "license": "MIT",
@@ -29,8 +33,8 @@
   },
   "homepage": "https://github.com/synatic/type-magic#readme",
   "engines": {
-    "node": ">=6.0.0",
-    "npm": ">=3.0.0"
+    "node": ">=12.0.0",
+    "npm": ">=6.0.0"
   },
   "dependencies": {
     "check-types": "10.0.0",
