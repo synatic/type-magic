@@ -23,9 +23,10 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-
+      # Skip post-install scripts here, as a malicious
+      # script could steal NODE_AUTH_TOKEN.
       - name: Install NPM dependencies
-        run: npm install
+        run: npm install --ignore-scripts
 
       - name: Run linting
         run: npm run lint
@@ -44,9 +45,10 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-
+      # Skip post-install scripts here, as a malicious
+      # script could steal NODE_AUTH_TOKEN.
       - name: Install NPM dependencies
-        run: npm install --production
+        run: npm install --ignore-scripts --production
 
       - name: Run NPM pack
         run: npm pack
