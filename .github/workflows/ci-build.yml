@@ -25,7 +25,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
 
       - name: Install NPM dependencies
-        run: npm ci
+        run: npm install
 
       - name: Run linting
         run: npm run lint
@@ -46,7 +46,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
 
       - name: Install NPM dependencies
-        run: npm ci
+        run: npm install --production
 
       - name: Run NPM pack
         run: npm pack

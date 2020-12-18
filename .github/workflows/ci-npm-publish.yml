@@ -15,7 +15,7 @@ jobs:
           node-version: 12
 
       - name: Install NPM dependencies
-        run: npm ci
+        run: npm install
 
       - name: Run linting
         run: npm run lint
@@ -35,7 +35,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
 
       - name: Install NPM dependencies
-        run: npm ci
+        run: npm install --production
 
       - name: Run NPM publish
         run: npm publish
