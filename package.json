@@ -1,5 +1,5 @@
 {
-  "name": "type-magic",
+  "name": "@synatic/type-magic",
   "version": "0.1.0",
   "description": "Utilities for checking and converting javascript types",
   "main": "index.js",
@@ -25,12 +25,10 @@
   },
   "contributors": [
     {
-      "name": "Martin Naude",
-      "email": "martin@synatic.com"
+      "name": "Martin Naude"
     },
     {
-      "name": "Thiren Bunsee",
-      "email": "thiren@synatic.com"
+      "name": "Thiren Bunsee"
     }
   ],
   "license": "MIT",
