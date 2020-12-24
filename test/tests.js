@@ -1,4 +1,6 @@
 const assert = require('assert');
+const moment =  require('moment');
+
 const convert = require('../lib');
 
 describe('Type-Magic', function () {
@@ -44,6 +46,14 @@ describe('Type-Magic', function () {
         it('should convert date to string with format', function () {
             assert.strictEqual(
                 convert.convert(new Date('2016-02-01T00:00:00Z'), 'string', 'YYYYMMDD'),
+                '20160201',
+                'Invalid Convert'
+            );
+        });
+
+        it('should convert moment date to string with format', function () {
+            assert.strictEqual(
+                convert.convert(moment.utc(new Date('2016-02-01T00:00:00Z')), 'string', 'YYYYMMDD'),
                 '20160201',
                 'Invalid Convert'
             );
