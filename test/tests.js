@@ -138,5 +138,90 @@ describe('Type-Magic', function () {
         it('should convert array to string with format', function () {
             assert.strictEqual(convert.convert([1, 2, 3], 'string', '0.00'), '1.00,2.00,3.00', 'Invalid Convert');
         });
+
+        it('should convert array to string with format', function () {
+            assert.strictEqual(convert.convert([1, 2, 3], 'string', '0.00'), '1.00,2.00,3.00', 'Invalid Convert');
+        });
+
+
+        // buffers
+        it('should convert buffer to buffer', function () {
+            assert.deepEqual(convert.convert(Buffer.from('test'), 'buffer' ), Buffer.from('test'), 'Invalid Convert');
+        });
+
+        it('should convert buffer to string', function () {
+            assert.strictEqual(convert.convert(Buffer.from('test'), 'string' ), 'test', 'Invalid Convert');
+        });
+
+        it('should convert buffer to string with format base64', function () {
+            assert.strictEqual(convert.convert(Buffer.from('test'), 'string' ,'base64'), 'dGVzdA==', 'Invalid Convert');
+        });
+
+        it('should convert buffer to string with format hex', function () {
+            assert.strictEqual(convert.convert(Buffer.from('test'), 'string' ,'hex'), '74657374', 'Invalid Convert');
+        });
+
+        it('should convert buffer to array', function () {
+            assert.deepEqual(convert.convert(Buffer.from('test'), 'array' ), [116,101,115,116], 'Invalid Convert');
+        });
+
+        it('should convert string to buffer', function () {
+            assert.deepEqual(convert.convert('test', 'buffer' ), Buffer.from('test'), 'Invalid Convert');
+        });
+
+        it('should convert base64 string to buffer', function () {
+            assert.deepEqual(convert.convert('dGVzdA==', 'buffer','base64' ), Buffer.from('test'), 'Invalid Convert');
+        });
+
+        it('should convert hex string to buffer', function () {
+            assert.deepEqual(convert.convert('74657374', 'buffer','hex' ), Buffer.from('test'), 'Invalid Convert');
+        });
+
+        it('should convert array to buffer', function () {
+            assert.deepEqual(convert.convert([116,101,115,116], 'buffer'), Buffer.from('test'), 'Invalid Convert');
+        });
+
+        it('should convert buffer to object', function () {
+            assert.deepEqual(convert.convert(Buffer.from('test'), 'object' ), {
+                "data": [
+                    116,
+                    101,
+                    115,
+                    116,
+                ],
+                "type": "Buffer"
+            }, 'Invalid Convert');
+        });
+
+        it('should convert object to buffer', function () {
+            assert.deepEqual(convert.convert({
+                "data": [
+                    116,
+                    101,
+                    115,
+                    116,
+                ],
+                "type": "Buffer"
+            }, 'buffer' ), Buffer.from('test'), 'Invalid Convert');
+        });
+
+        it('should not convert invalid object to buffer', function () {
+            try{
+                const x=convert.convert({
+                    "data": [
+                        116,
+                        101,
+                        115,
+                        116,
+                    ],
+                    "type": "xxx"
+                },'buffer');
+                console.log(x);
+            }catch(exp){
+                return;
+            }
+            throw new Error("Invalid conversion")
+        });
+
     });
 });
