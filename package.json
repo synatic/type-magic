@@ -41,7 +41,7 @@
     "npm": ">=6.0.0"
   },
   "dependencies": {
-    "check-types": "11.1.2",
+    "check-types": "11.2.2",
     "moment": "2.29.3",
     "numeral": "2.0.6"
   },
