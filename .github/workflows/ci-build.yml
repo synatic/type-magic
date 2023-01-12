@@ -2,10 +2,7 @@ name: "Build"
 
 on:
   push:
-    branches: [master, develop]
   pull_request:
-    # The branches below must be a subset of the branches above
-    branches: [master, develop]
   workflow_dispatch:
     inputs:
       reason:
@@ -19,7 +16,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
@@ -41,7 +38,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
