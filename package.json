@@ -1,6 +1,6 @@
 {
   "name": "@synatic/type-magic",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Utilities for checking and converting javascript types",
   "main": "index.js",
   "files": [
@@ -41,8 +41,8 @@
     "npm": ">=6.0.0"
   },
   "dependencies": {
-    "check-types": "11.2.2",
-    "moment": "2.29.4",
+    "check-types": "11.2.3",
+    "moment": "2.30.1",
     "numeral": "2.0.6"
   },
   "devDependencies": {
@@ -50,7 +50,7 @@
     "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^8.1.0",
     "mocha": "^10.0.0",
-    "nyc": "^15.1.0",
-    "prettier": "^2.2.1"
+    "nyc": "^17.0.0",
+    "prettier": "^3.3.3"
   }
 }
