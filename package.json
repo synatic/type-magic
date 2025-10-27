@@ -1,6 +1,6 @@
 {
   "name": "@synatic/type-magic",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Utilities for checking and converting javascript types",
   "main": "index.js",
   "files": [
